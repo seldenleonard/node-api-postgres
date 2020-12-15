@@ -34,10 +34,9 @@ const createUser = (request, response) => {
     if (error) {
       throw error;
     }
-    response.status(201).send(`User added with ID: ${result.insertId}`);
+    response.status(201).send(`User added with ID: ${results.insertId}`);
   });
-}
-;
+};
 
 const updateUser = (request, response) => {
   const id = parseInt(request.params.id);
@@ -72,4 +71,4 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
-}
+};
